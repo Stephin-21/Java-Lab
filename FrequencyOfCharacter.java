@@ -1,0 +1,25 @@
+package test;
+import java.util.Scanner;
+public class FrequencyOfCharacter {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter string : ");
+		String word = sc.nextLine();
+		System.out.println("Enter Character to be checked : ");
+		char check = sc.next().charAt(0);
+		int count =checkChar(word,check);
+		System.out.println("Frequency count is "+count);
+	}
+
+
+static int checkChar(String word,char check) {
+	int count=0;
+	char []charArray=word.toCharArray();
+	for(int i=0;i<word.length();i++) {
+		if(check==charArray[i]) {
+			count++;
+		}
+	}
+	return count;
+}
+}
