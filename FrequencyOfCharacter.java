@@ -8,7 +8,12 @@ public class FrequencyOfCharacter {
 		System.out.println("Enter Character to be checked : ");
 		char check = sc.next().charAt(0);
 		int count =checkChar(word,check);
-		System.out.println("Frequency count is "+count);
+		if(count==0) {
+			System.out.println("Charachter is not present in String");
+		}
+		else {
+			System.out.println("Frequency count is "+count);
+		}
 	}
 
 
