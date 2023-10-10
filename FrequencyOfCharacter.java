@@ -1,3 +1,11 @@
+/*
+ * File : FrequencyOfCharachter
+ * Description : Find Frequency of a charachter in a string
+ * Author : Stephin Mathew
+ * Version : 1.0
+ * Date :25/09/2023
+ */
+
 package test;
 import java.util.Scanner;
 public class FrequencyOfCharacter {
