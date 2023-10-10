@@ -1,0 +1,92 @@
+/*
+ * File : MatrixMultiplication
+ * Description : Multiplication of two matrices
+ * Author : Stephin Mathew
+ * Version : 1.0
+ * Date :10/10/2023
+ */
+
+package test;
+import java.util.Scanner;
+public class MatrixMultiplication {
+ 
+public static void main(String[] args) {
+		
+int r1,c1,r2,c2,i,j,k;
+Scanner sc= new Scanner(System.in);
+System.out.println("Enter Number of rows and coloumns of first matrix : ");
+r1=sc.nextInt();
+c1=sc.nextInt();
+System.out.println("Enter Number of rows and coloumns of Second matrix : ");
+r2=sc.nextInt();
+c2=sc.nextInt();
+int matrix1[][]=new int[r1][c1];
+int matrix2[][]=new int[r2][c2];
+if(c1!=r2) {
+	System.out.println("Matrix Multiplication is not possible ");
+}
+else
+{
+//Inputing Values Into the First Matrix
+System.out.println("Enter Values of First Matrix");
+for(i=0;i<r1;i++) 
+{
+for(j=0;j<c1;j++) {
+matrix1[i][j]=sc.nextInt();
+}
+}
+
+//Inputing Values Into the Second Matrix
+System.out.println("Enter Values of Second Matrix");
+for(i=0;i<r2;i++) 
+{
+for(j=0;j<c2;j++) {
+matrix2[i][j]=sc.nextInt();
+}
+}
+
+//Printing The First Matrix
+System.out.println("Matrix1 ");
+for(i=0;i<r1;i++) 
+{
+for(j=0;j<c1;j++) {
+System.out.print(" " +matrix1[i][j]);
+}
+System.out.println();
+}
+
+//Printing The Second Matrix
+System.out.println("Matrix2 ");
+for(i=0;i<r2;i++) 
+{
+for(j=0;j<c2;j++) {
+System.out.print(" " +matrix2[i][j]);
+}
+System.out.println();
+}
+
+//Matrix Multiplication
+
+int matrix3[][]=new int[r2][c1];
+for(i=0;i<r2;i++) 
+{
+for(j=0;j<c1;j++) {
+matrix3[i][j]=0;
+for(k=0;k<c1;k++) {
+matrix3[i][j]=matrix2[i][j]+matrix1[i][k]*matrix2[k][j];
+}
+}
+}
+
+//Printing the Resultant Matrix
+System.out.println("Multiplied Matrix ");
+for(i=0;i<r2;i++) 
+{
+for(j=0;j<c1;j++) {
+System.out.print(" " + matrix3[i][j]);
+}
+System.out.println();
+}
+}
+}
+}
