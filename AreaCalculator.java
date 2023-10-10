@@ -37,13 +37,13 @@ area.getArea(radius);
 }
 class Area{
 public void getArea(float base,float height) {
-	System.out.println("Area of Triangle with base "+base+ "and height "+height+ "is : "+ 0.5*base*height);
+	System.out.println("Area of Triangle with base "+base+ " and height "+height+ " is : "+ 0.5*base*height);
 }
 
 public void getArea(int width,int Height) {
-		System.out.println("Area of Rectangle with width "+width+ "and length "+Height + "is : " +width*Height);
+		System.out.println("Area of Rectangle with width "+width+ " and length "+Height + " is : " +width*Height);
 	}
 public void getArea(float radius) {
-		System.out.println("Area of Circle with radius "+radius+ "is : "+3.14*radius*radius);
+		System.out.println("Area of Circle with radius "+radius+ " is : "+3.14*radius*radius);
 }
 }
