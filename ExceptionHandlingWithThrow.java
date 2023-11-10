@@ -1,5 +1,5 @@
 /*
- * File : ExceptionHandling
+ * File : ExceptionHandlingWithThrow
  * Description : Java program that shows the usage of try, catch and finally
  * Author : Stephin Mathew
  * Version : 1.0
