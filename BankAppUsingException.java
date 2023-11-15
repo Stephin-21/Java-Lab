@@ -84,10 +84,15 @@ public class BankAppUsingException {
 			int accNo;
 			System.out.println("Enter Account Number you want to search : ");
 			accNo=sc.nextInt();
+			int j=0;
 			for(int i=0;i<lim;i++) {
 				if(customer[i].accountNumber==accNo) {
 					customer[i].getCustomerDetails();
+					j++;
 				}
+			}
+			if(j==0) {
+				System.out.println("Account not found");
 			}
 			break;
 			
@@ -104,12 +109,17 @@ public class BankAppUsingException {
 			}
 			else
 			{
+				 j=0;
 			for(int i=0;i<lim;i++) {
 				if(customer[i].accountNumber==accNo) {
-//					customer[i].getCustomerDetails();
 					customer[i].balance=customer[i].balance+depositAmount;
+					j++;
 					}
+				
 				}
+			if(j==0) {
+				System.out.println("Account not found");
+			}
 			}
 			}
 			catch(InvalidAmountException e) {
@@ -119,6 +129,8 @@ public class BankAppUsingException {
 			
 			break;
 			
+			
+		//Withdrawing Money	
 		case 4 :
 			int withdrawAmount;
 			System.out.println("Enter Account Number : ");
@@ -127,34 +139,41 @@ public class BankAppUsingException {
 			
 			System.out.println("Enter Amount to Withdraw ");
 			withdrawAmount=sc.nextInt();
-			if(withdrawAmount<0) {
+			if(withdrawAmount<=0) {
 				throw amountException;
 			}
 			else {
+				 j=0;
 			for(int i=0;i<lim;i++) {
 				if(customer[i].accountNumber==accNo) {
-					if(withdrawAmount<customer[i].balance) {
+					if(withdrawAmount>customer[i].balance) {
 						throw fundsException;
 			        } 
-                                        else{
+                    else{
 					customer[i].balance = customer[i].balance - withdrawAmount;
-                                        customer[i].getCustomerDetails();
-
-				}
+                    customer[i].getCustomerDetails();
+                    j++;
+                    }
+			    }
+			   
+			}
+			if(j==0) {
+				System.out.println("Account not found");
 			}
 			}
-			}catch(InsufficientAmountException e) {
+			}catch(InvalidAmountException e) {
 				System.out.println(e.getMessage());
 			}
-			catch (InsufficientFundsException e) {
+			catch (InsufficientAmountException e) {
                         System.out.println(e.getMessage());
-                    }
+            }
                     break;
                 default:
                     // Invalid choice
             }
         } while (choice < 5);
-        sc.close();
+	}
+}
 
 
 
