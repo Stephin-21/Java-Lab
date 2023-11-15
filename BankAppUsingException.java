@@ -135,19 +135,27 @@ public class BankAppUsingException {
 				if(customer[i].accountNumber==accNo) {
 					if(withdrawAmount<customer[i].balance) {
 						throw fundsException;
-					}
+			        } 
+                                        else{
+					customer[i].balance = customer[i].balance - withdrawAmount;
+                                        customer[i].getCustomerDetails();
+
 				}
 			}
 			}
 			}catch(InsufficientAmountException e) {
 				System.out.println(e.getMessage());
 			}
-			
-}
-		 
-}while(choice!=5);
-}
-}
+			catch (InsufficientFundsException e) {
+                        System.out.println(e.getMessage());
+                    }
+                    break;
+                default:
+                    // Invalid choice
+            }
+        } while (choice < 5);
+        sc.close();
+
 
 
 
