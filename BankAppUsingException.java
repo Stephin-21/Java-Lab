@@ -14,7 +14,6 @@ class InsufficientAmountException extends Exception{
 }
 
 class Customer{
-	InvalidAmountException amountException= new InvalidAmountException("Invalid Amount; amount<0");
 	Scanner sc= new Scanner(System.in);
 	int accountNumber,balance;
 	String accountType,customerName;
