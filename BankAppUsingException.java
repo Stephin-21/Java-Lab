@@ -150,8 +150,7 @@ public class BankAppUsingException {
 			        } 
                     else{
 					customer[i].balance = customer[i].balance - withdrawAmount;
-                    customer[i].getCustomerDetails();
-                    j++;
+                  			  j++;
                     }
 			    }
 			   
