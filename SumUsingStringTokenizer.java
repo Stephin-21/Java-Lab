@@ -18,15 +18,12 @@ public class SumUsingStringTokenizer {
 		StringTokenizer obj=new StringTokenizer(input);
 		
 		int noOfTokens=obj.countTokens();
-		System.out.println(noOfTokens);
 		
 		while(obj.hasMoreTokens()) {
 			 num=Integer.parseInt(obj.nextToken());
 			 sum=sum+num;
 		}
 		System.out.println("Sum of "+noOfTokens+" Tokens is : "+sum);
-			
-			
 		}
 
 	}
