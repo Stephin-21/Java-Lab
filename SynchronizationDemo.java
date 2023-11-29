@@ -3,7 +3,7 @@
  * Description : Thread Sychronization during Multiplication Table creation
  * Author : Stephin Mathew
  * Version : 1.0
- * Date :28/11/2023
+ * Date :29/11/2023
  */
 
 
