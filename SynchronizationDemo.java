@@ -1,5 +1,5 @@
 /*
- * File : FileHandling
+ * File : SynchronizationDemo
  * Description : Thread Sychronization during Multiplication Table creation
  * Author : Stephin Mathew
  * Version : 1.0
