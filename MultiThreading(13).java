@@ -25,7 +25,7 @@ class NumberManager{
 		   wait();
 	   }
 	   
-		   System.out.print(generatedNumber*generatedNumber*generatedNumber+" ");
+		    System.out.print("Cube of "+generatedNumber +" is "+generatedNumber*generatedNumber*generatedNumber+" ");
    
 	   System.out.println();
 	   numberGenerated=false;
@@ -36,8 +36,7 @@ class NumberManager{
 	   while(!numberGenerated || generatedNumber%2!=0) {
 		   wait();
 	   }
-	  
-		   System.out.print(generatedNumber*generatedNumber+" ");
+	     System.out.print("Square of "+ generatedNumber +" is " +generatedNumber*generatedNumber+" ");
 	   System.out.println();
 	   numberGenerated=false;
 	   
