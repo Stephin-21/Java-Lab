@@ -1,3 +1,11 @@
+/*
+ * File : ExceptionHandlingWithThrow
+ * Description : Java program that shows the usage of try, catch and finally
+ * Author : Stephin Mathew
+ * Version : 1.0
+ * Date :10/11/2023
+ */
+
 package test;
 
 import java.util.Scanner;
