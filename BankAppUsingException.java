@@ -1,3 +1,11 @@
+/*
+ * File : BankAppUsingException
+ * Description : Create a mini application for a Banking System
+ * Author : Stephin Mathew
+ * Version : 1.0
+ * Date :17/11/2023
+ */
+
 package test;
 import java.util.Scanner;
 
