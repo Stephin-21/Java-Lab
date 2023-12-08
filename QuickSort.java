@@ -1,3 +1,12 @@
+/*
+ * File : QuickSort
+ * Description : Perform QuickSort On A String
+ * Author : Stephin Mathew
+ * Version : 1.0
+ * Date :8/12/2023
+ */
+
+
 package test;
 import java.util.Scanner;
 
