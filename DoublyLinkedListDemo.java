@@ -1,5 +1,4 @@
-/*
- * File : DoublyLinkedListDemo
+* File : DoublyLinkedListDemo
  * Description : Create a doubly linked list of elements.
  * Author : Stephin Mathew
  * Version : 1.0
@@ -23,13 +22,6 @@ class DoublyLinkedList <T>{
 		list.add(index, item);
 	}
 	
-	public T removeFront() {
-		return list.removeFirst();
-	}
-	
-	public T removeEnd() {
-		return list.removeLast();
-	}
 	
 	public T removeAtAnyPosition(int index) {
 		return list.remove(index);
@@ -52,13 +44,11 @@ public class DoublyLinkedListDemo{
 				+ "1) Insert At Front "
 				+ "2) Insert At End "
 				+ "3) Insert At Any Position "
-				+ "4) Delete At Front "
-				+ "5) Delete At End "
-				+ "6) Delete At Any Position "
-				+ "7) Display "
-				+ "8) Exit ");
+				+ "4) Delete At Any Position "
+				+ "5) Display "
+				+ "6) Exit ");
 		choice=sc.nextInt();
-		while(choice!=8){
+		while(choice!=6){
 		 
 		switch(choice) {
 		case 1 :{
@@ -82,26 +72,15 @@ public class DoublyLinkedListDemo{
 			break;
 			
 		}
+		
 		case 4 :{
-			item=doublyLinkedList.removeFront();
-			System.out.println("Removed Element is : "+item);
-			break;
-		}
-		
-		case 5 :{
-			item=doublyLinkedList.removeEnd();
-			System.out.println("Removed Element is : "+item);
-			break;
-		}
-		
-		case 6 :{
 			System.out.println("Enter index of Element to be deleted :  ");
 			index=sc.nextInt();
 			item=doublyLinkedList.removeAtAnyPosition(index);
 			System.out.println("Removed Element is : "+item);
 			break;
 		}
-		case 7:{
+		case 5:{
 			System.out.println("Doubly Linked List : ");
 			doublyLinkedList.display();
 			break;
