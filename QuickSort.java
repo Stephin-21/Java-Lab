@@ -1,51 +1,51 @@
 package test;
-
 import java.util.Scanner;
 
 public class QuickSort {
-	public static void main(String [] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the Size of Array");
-		int size=sc.nextInt();
-		int ar[]=new int[size];
-		
-		System.out.println("Enter the elements of array:");
-		for(int i=0;i<size;i++) {
-			ar[i]=sc.nextInt();
-		}
-		
-		quicksort(ar, 0, size-1);
-		
-		System.out.print("Sorted array:");
-		for(int i=0;i<size;i++) {
-			System.out.print(ar[i]+"  ");
-		}
-		System.out.println();
-	}
-	
-public static void quicksort(int ar[],int start,int end) {
-	int pivot,j,temp,i;
-    if(start<end){
-        pivot=start;
-        i=start;
-        j=end;
-        
-        while(i<j){
-            while(ar[i]<=ar[pivot]&&i<end)
+    public static void swap(String[] arr, int i, int j) {
+        String temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    public static int partition(String[] arr, int low, int high) {
+        String pivot = arr[low];
+        int i = low;
+        for (int j = low + 1; j <= high; j++) {
+            if (arr[j].compareTo(pivot) < 0) {
                 i++;
-            while(ar[j]>ar[pivot])
-                j--;
-            if(i<j){
-                temp=ar[i];
-                 ar[i]=ar[j];
-                 ar[j]=temp;
+                swap(arr, i, j);
             }
         }
-        temp=ar[pivot];
-        ar[pivot]=ar[j];
-        ar[j]=temp;
-        quicksort(ar,start,j-1);
-        quicksort(ar,j+1,end);
-   }
-}
+        swap(arr, low, i); 
+        return i;
+    }
+
+    public static void quickSort(String[] arr, int low, int high) {
+        if (low < high) {
+            int pi = partition(arr, low, high);
+            quickSort(arr, low, pi - 1);
+            quickSort(arr, pi + 1, high);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the limit: ");
+        int limit = sc.nextInt();
+        sc.nextLine(); 
+
+        String[] strings = new String[limit];
+        System.out.println("Enter the strings to be sorted:");
+        for (int i = 0; i < limit; i++) {
+            strings[i] = sc.nextLine();
+        }
+
+        quickSort(strings, 0, limit - 1);
+
+        System.out.println("Sorted strings:");
+        for (int i = 0; i < limit; i++) {
+            System.out.println(strings[i]);
+        }
+    }
 }
