@@ -1,8 +1,12 @@
+/* 
+ * File : GUICalc.java
+ * Description : Java program that works as a simple calculator. Arrange Buttons for digits and
+   the + - * % operations properly. Add a text field to display the result. Handle any possible
+   exceptions like divide by zero. Use Java Swing.
+ * Author : Stephin Mathew 
+ * Date : 13/12/2023
+ */
 package javaprojects;
-/*Java program that works as a simple calculator. Arrange Buttons for digits and
-the + - * % operations properly. Add a text field to display the result. Handle any possible
-exceptions like divide by zero. Use Java Swing.*/
-
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
