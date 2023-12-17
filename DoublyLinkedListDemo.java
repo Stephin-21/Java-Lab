@@ -1,11 +1,11 @@
-* File : DoublyLinkedListDemo
+/* File : DoublyLinkedListDemo
  * Description : Create a doubly linked list of elements.
  * Author : Stephin Mathew
  * Version : 1.0
  * Date :8/12/2023
  */
 
-package test;
+package stephin;
 import java.util.LinkedList;
 import java.util.Scanner;
 class DoublyLinkedList <T>{
@@ -40,16 +40,18 @@ public class DoublyLinkedListDemo{
 		Scanner sc=new Scanner(System.in);
 		DoublyLinkedList <Integer> doublyLinkedList= new DoublyLinkedList();
 		int choice,item,index;
-		System.out.println("Enter choice "
-				+ "1) Insert At Front "
-				+ "2) Insert At End "
-				+ "3) Insert At Any Position "
-				+ "4) Delete At Any Position "
-				+ "5) Display "
-				+ "6) Exit ");
-		choice=sc.nextInt();
-		while(choice!=6){
-		 
+		
+		
+		 do {
+			 System.out.println("Enter choice "
+						+ "1) Insert At Front "
+						+ "2) Insert At End "
+						+ "3) Insert At Any Position "
+						+ "4) Delete At Any Position "
+						+ "5) Display "
+						+ "6) Exit ");
+
+				choice=sc.nextInt();
 		switch(choice) {
 		case 1 :{
 			System.out.println("Enter Element to Insert at Front : ");
@@ -88,8 +90,7 @@ public class DoublyLinkedListDemo{
 		default :
 			System.out.println("Invalid Choice ");
 		}
-		System.out.println("Enter Choice: ");
-		choice=sc.nextInt();
-	}
+		
+	}while(choice!=6);
 	}
 }
