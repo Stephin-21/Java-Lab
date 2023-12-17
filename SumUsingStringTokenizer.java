@@ -6,7 +6,7 @@
  * Date :28/11/2023
  */
 
-package test;
+package stephin;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 public class SumUsingStringTokenizer {
@@ -24,8 +24,7 @@ public class SumUsingStringTokenizer {
 			 System.out.println(num);
 			 sum=sum+num;
 		}
-		System.out.println("Sum of "+noOfTokens+" Tokens is : "+sum);
+		System.out.println("Sum of the "+noOfTokens+" Integers is : "+sum);
 		}
 
 	}
-
