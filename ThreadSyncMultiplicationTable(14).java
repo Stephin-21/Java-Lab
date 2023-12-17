@@ -13,6 +13,7 @@ import java.util.Scanner;
 class MultiplicationTable{
 	synchronized void printMultiplicationTable(int number) {
 		//synchronized(this) {
+		System.out.println("Multiplication Table Of "+number+":");
 		  for(int i=1;i<=10;i++) {
 			 System.out.println(i+"X"+number+"="+i*number);
 		 }
